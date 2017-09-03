@@ -1,0 +1,15 @@
+npm init
+npm install --save express
+npm install --save express-handlebars
+
+
+git init
+git add .
+git commit -m "Initial commit"
+
+npm install --save body-parser
+npm install --save formidable
+npm install --save cookie-parser
+npm install --save express-session
+npm install --save parseurl
+npm install --save fs
