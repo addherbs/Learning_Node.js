@@ -12,6 +12,7 @@ module.exports.callMe = lol;
 
 */
 
+// This is shared between every other module
 
 module.exports = {
 
@@ -22,4 +23,3 @@ module.exports = {
 		console.log(" hahahahha");
 	}
 }
-
