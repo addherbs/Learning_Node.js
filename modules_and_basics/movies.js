@@ -13,7 +13,7 @@ module.exports.callMe = lol;
 */
 
 // This is shared between every other module
-
+/*
 module.exports = {
 
 	num1 : function(){
@@ -21,5 +21,13 @@ module.exports = {
 	},
 	num2 : function(){
 		console.log(" hahahahha");
+	}
+}
+*/
+
+module.exports = function(){
+
+	return {
+		num1 : " Number 1 is this"
 	}
 }
