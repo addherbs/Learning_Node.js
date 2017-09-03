@@ -18,5 +18,7 @@ console.log(movies.num1)
 
 
 var fs = require('fs');
-fs.writeFileSync("ThisFile.txt", "This is the sentence that we go inside ThisFile.txt");	// File was created
 
+//fs.writeFileSync("ThisFile.txt", "This is the sentence that we go inside ThisFile.txt");	// File was created
+
+console.log(fs.readFileSync("ThisFile.txt").toString());
