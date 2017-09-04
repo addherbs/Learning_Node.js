@@ -27,7 +27,7 @@ fs.writeFileSync("ThisFile.txt", "This is the sentence that we go inside ThisFil
 console.log(fs.readFileSync("ThisFile.txt").toString());
 */
 
-
+/*
 var path = require('path');
 
 var thisApp = "Desktop/tutorials/nodejs_basics/app.js";
@@ -38,4 +38,31 @@ console.log(path.normalize(thisMovies));
 console.log(path.dirname(thisMovies));
 console.log(path.basename(thisApp));
 console.log(path.extname(thisMovies));
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
