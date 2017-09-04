@@ -41,7 +41,10 @@ console.log(path.extname(thisMovies));
 
 */
 
-
+// This function sets interval and runs constantly
+setInterval(function (){
+	console.log("This is going to be printed an X number of times mentioned below at every '2000' millisecond time");
+}, 2000);
 
 
 
