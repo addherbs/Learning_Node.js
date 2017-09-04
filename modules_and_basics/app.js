@@ -41,12 +41,19 @@ console.log(path.extname(thisMovies));
 
 */
 
+
+console.log (__dirname);		//C:\Users\Cyther\Desktop\tutorials\nodejs_basics
+console.log (__filename);		//C:\Users\Cyther\Desktop\tutorials\nodejs_basics\app.js
+
+
+
 // This function sets interval and runs constantly
+/*
 setInterval(function (){
 	console.log("This is going to be printed an X number of times mentioned below at every '2000' millisecond time");
 }, 2000);
 
-
+*/
 
 
 
