@@ -9,6 +9,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
@@ -40,6 +41,11 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }));
+
+
+//Passport initialize
+app.use(passport.initialize());
+app.use(passport.session());
 
 // In this example, the formParam value is going to get morphed into form body format useful for printing.
 // Express Validator
