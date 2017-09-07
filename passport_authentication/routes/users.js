@@ -66,7 +66,7 @@ passport.use(new LocalStrategy(
             if (!user) {
                 return done(null, false, { message: 'Unknown user' });
             }
-            User.comparePassword(password, user.password, function (err, isMatch) {
+            User.comparePassword(password, user.Password, function (err, isMatch) {
                 if (err) throw err;
                 if (isMatch) {
                     return done(null, user );
@@ -76,7 +76,6 @@ passport.use(new LocalStrategy(
                 }
             });
         });
-
     }));
 
 
@@ -92,11 +91,22 @@ passport.deserializeUser(function (id, done) {
 
 
 router.post('/login',
-    passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login', failureFlash: true}),
-    function (req, res){
-        console.log('Ive entered passport authenticate');
+    passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+    function(req, res) {
         res.redirect('/');
-    });
+});
+
+
+router.get('/logout', function (req,res) {
+   req.logOut();
+
+   req.flash('success_msg', 'You are logged out');
+
+   res.redirect('/users/login');
+});
+
+
+
 
 
 module.exports = router;
